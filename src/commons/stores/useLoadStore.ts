@@ -1,6 +1,11 @@
 import { create } from "zustand";
 
-export const useLoadStore = create((set) => ({
+interface LoadState {
+  isLoaded: boolean;
+  setIsLoaded: () => void;
+}
+
+export const useLoadStore = create<LoadState>((set) => ({
   isLoaded: false,
   setIsLoaded: () => set(() => ({ isLoaded: true })),
 }));
