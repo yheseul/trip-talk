@@ -1,7 +1,7 @@
 import { usePathname } from "next/navigation";
 import Button from "./Button";
 import CustomDatePicker from "./CustomDatePicker";
-import SearchBar from "./SearchBar/SearchBar";
+import SearchBar from "./SearchBar/components/SearchBar";
 import { useRouter } from "next/navigation";
 
 const FilterBar = () => {
