@@ -8,7 +8,7 @@ export default async function Home() {
         <Login />
       </div>
       <div className="relative w-full h-[700px]">
-        <Image src="/pngs/login-signup.png" alt="loginSignUp" fill />
+        <Image src="/webp/login-signup.webp" alt="loginSignup" fill />
       </div>
     </div>
   );

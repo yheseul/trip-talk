@@ -3,14 +3,14 @@
 import Image from "next/image";
 import Input from "../Input";
 import Button from "../Button";
-import useLogin from "../../../commons/hooks/useLogin";
+import useLogin from "./hooks/useLogin";
 
 export default function Login() {
-  const { handleInputChange, onClickLogin, onClickSignUp } = useLogin();
+  const { handleInputChange, onClickLogin, onClickSignup } = useLogin();
 
   return (
     <div className="relative flex flex-col items-center self-stretch gap-6 px-5 pt-16 w-96">
-      <Image src="/pngs/logo.png" alt="logo" width={120} height={74.533} />
+      <Image src="/webp/logo.webp" alt="logo" width={120} height={74.533} />
       <div className="self-stretch text-lg not-italic font-semibold leading-6 text-center text-black">
         트립트립에 오신걸 환영합니다.
       </div>
@@ -31,7 +31,7 @@ export default function Login() {
         isLabel={false}
       />
       <Button id="login" color="blue" width="100%" onClick={onClickLogin} />
-      <Button id="singUp" color="white" width="100%" onClick={onClickSignUp} />
+      <Button id="singUp" color="white" width="100%" onClick={onClickSignup} />
     </div>
   );
 }
