@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import ImageUploader from "../../ImageUploader/ImageUploader";
 import { BOARDS_WRITE } from "../../../../constants/constants";
 import { IBoardsWriteHook } from "../../../../types/components.type";
-import useBoardsWrite from "../../../../commons/hooks/useBoardsWrite";
+import useBoardsWrite from "../hooks/useBoardsWrite";
 import ModalContainer from "../../ModalContainer/ModalContainer";
 import { useState } from "react";
 
