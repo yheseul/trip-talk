@@ -1,10 +1,10 @@
-import useCommentEditForm from "../hooks/useCommentEditForm";
+import useCommentEdit from "../hooks/useCommentEdit";
 import { ICommentEdit } from "../types/comment.type";
 import CommentForm from "./CommentForm";
 
 export default function CommentEdit(commentData: ICommentEdit) {
   const { handleSubmitEdit, handleInputChange, disabledButton } =
-    useCommentEditForm(commentData);
+  useCommentEdit(commentData);
 
   return (
     <CommentForm
