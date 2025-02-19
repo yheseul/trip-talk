@@ -5,13 +5,13 @@ import styles from "./styles.module.css";
 import { FetchBoardsDocument } from "../../commons/graphql/graphql";
 import Pagination from "../_components/Pagination";
 import FilterBar from "../_components/FilterBar";
-import useBoards from "../../commons/hooks/useBoards";
-import { IBoardList } from "../../types/board.type";
+import { IBoardList } from "../_components/Board/types/board.type";
 import Board from "../_components/Board/components/Board";
+import useFilterPostsByDateRange from "../_components/Board/hooks/useFilterPostsByDateRange";
 
 export default function Boards() {
   const { data, loading, error, refetch } = useQuery(FetchBoardsDocument);
-  const { lastPage, isDateRange, filteredData } = useBoards(data);
+  const { lastPage, isDateRange, filteredData } = useFilterPostsByDateRange(data);
 
   if (loading) {
     //  skeleton
