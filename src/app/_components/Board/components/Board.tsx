@@ -1,5 +1,5 @@
 import { DeleteOutlined } from "@ant-design/icons";
-import { IBoardList } from "../../../../types/board.type";
+import { IBoardList } from "../types/board.type";
 import useBoardsList from "../hooks/useBoardList";
 import useHover from "../../../../commons/hooks/useHover";
 

@@ -1,7 +1,7 @@
 import Button from "../../Button";
 import useBoardsDetail from "../hooks/useBoardsDetail";
 import LikeAndDisLikeButton from "../../DisLikeButton";
-import Youtube from "../../Youtube/Youtube";
+import Youtube from "../../Youtube";
 import Divider from "../../Divider";
 import {
   EnvironmentOutlined,

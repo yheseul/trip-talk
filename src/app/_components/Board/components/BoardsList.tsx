@@ -3,7 +3,7 @@ import {
   FetchBoardsCountDocument,
   FetchBoardsDocument,
 } from "../../../../commons/graphql/graphql";
-import Pagination from "../../Pagination";
+import Pagination from "../../Pagination/components/Pagination";
 import Board from "./Board";
 
 export default function BoardsList() {

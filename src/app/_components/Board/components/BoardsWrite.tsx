@@ -8,7 +8,7 @@ import ImageUploader from "../../ImageUploader/ImageUploader";
 import { BOARDS_WRITE } from "../../../../constants/constants";
 import { IBoardsWriteHook } from "../../../../types/components.type";
 import useBoardsWrite from "../hooks/useBoardsWrite";
-import ModalContainer from "../../ModalContainer/ModalContainer";
+import ModalContainer from "../../ModalContainer";
 import { useState } from "react";
 
 export default function BoardsWrite(props: IBoardsWriteHook) {
