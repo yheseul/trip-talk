@@ -1,9 +1,9 @@
 "use client";
 
 import { CloseOutlined } from "@ant-design/icons";
-import { IModalContainer } from "../../types/components.type";
-import Button from "./Button";
 import { ChangeEvent, useState } from "react";
+import { IModalContainer } from "../types/modalContainer.type";
+import Button from "../../Button/components/Button";
 
 export default function ModalContainer(props: IModalContainer) {
   const { isSwitched, children, isPrompt, alertMessage, setUserPassword } =
