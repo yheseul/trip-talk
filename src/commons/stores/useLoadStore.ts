@@ -1,9 +1,5 @@
 import { create } from "zustand";
-
-interface LoadState {
-  isLoaded: boolean;
-  setIsLoaded: () => void;
-}
+import { LoadState } from "../../types/stores.type";
 
 export const useLoadStore = create<LoadState>((set) => ({
   isLoaded: false,

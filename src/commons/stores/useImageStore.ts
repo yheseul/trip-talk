@@ -1,7 +1,7 @@
 import { create } from "zustand";
-import { ImageStore } from "../../types/stores.type";
+import { ImageStoreState } from "../../types/stores.type";
 
-export const useImageStore = create<ImageStore>((set) => ({
+export const useImageStore = create<ImageStoreState>((set) => ({
   imageMap: {},
   setImage: (id, url) =>
     set((state) => ({ imageMap: { ...state.imageMap, [id]: url } })),
