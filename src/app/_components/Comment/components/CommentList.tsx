@@ -9,7 +9,7 @@ export default function CommentList() {
   const countComments = dataCommentList?.fetchBoardComments.length;
 
   return (
-    <div className="flex flex-col py-10">
+    <div className="flex flex-col px-6 py-10">
       {countComments ? (
         <InfiniteScroll
           dataLength={countComments ?? 0}

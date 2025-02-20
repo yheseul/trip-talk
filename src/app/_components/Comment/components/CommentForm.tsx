@@ -16,7 +16,7 @@ const CommentForm = (props: ICommentFormProps) => {
   } = props;
   return (
     <form
-      className="flex flex-col items-start w-full gap-6 pt-10"
+      className="flex flex-col items-start w-full gap-6 px-6 pt-10"
       onSubmit={handleCommentSubmit}
     >
       {!isEdit && (
