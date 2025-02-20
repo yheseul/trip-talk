@@ -1,7 +1,7 @@
 import { ChangeEvent, MouseEvent, useRef } from "react";
 import checkValidationFile from "../../../../commons/Libraries/checkValidationFile";
-import { ICheckValidationFile } from "../../../../types/components.type";
 import { useImageStore } from "../../../../commons/stores/useImageStore";
+import { ICheckValidationFile } from "../../../../types/components.type";
 
 export default function useImageUploader(id: string) {
   const { imageMap, setImage } = useImageStore();
