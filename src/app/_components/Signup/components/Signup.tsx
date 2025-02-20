@@ -2,7 +2,7 @@
 
 import { CloseOutlined } from "@ant-design/icons";
 import Button from "../../Button";
-import ControllerInput from "../../ControllerInput/ControllerInput";
+import ControllerInput from "../../ControllerInput";
 import ModalContainer from "../../ModalContainer";
 import { useRouter } from "next/navigation";
 import useSignup from "../hooks/useSignup";
