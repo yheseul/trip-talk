@@ -3,16 +3,16 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { IBannerSlider } from "../../types/components.type";
 import SlideImage from "./SlideImage";
+import { ICarousel } from "../types/carousel.type";
 
-export default function BannerSlider({
+export default function Carousel({
   delay,
   length,
   image,
   width,
   height,
-}: IBannerSlider) {
+}: ICarousel) {
   return (
     <Swiper
       spaceBetween={20}

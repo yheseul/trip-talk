@@ -1,6 +1,6 @@
-import { IButtonProps } from "../../types/components.type";
-import { BUTTON } from "../../constants/constants";
+import { BUTTON } from "../../../../constants/constants";
 import { EditOutlined, MenuOutlined } from "@ant-design/icons";
+import { IButtonProps } from "../types/button.type";
 
 export default function Button({
   id,

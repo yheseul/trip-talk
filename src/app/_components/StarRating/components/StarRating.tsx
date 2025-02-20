@@ -1,5 +1,5 @@
 import { Rate } from "antd";
-import { IStarRating } from "../../../types/components.type";
+import { IStarRating } from "../types/starRating.type";
 
 export default function StarRating({
   defaultValue = 0,

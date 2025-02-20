@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ICustomImage } from "../../types/components.type";
+import { ICustomImage } from "../types/carousel.type";
 
 export default function SlideImage({ image, width, height }: ICustomImage) {
   return (
