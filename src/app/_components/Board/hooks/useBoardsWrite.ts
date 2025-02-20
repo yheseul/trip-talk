@@ -2,15 +2,11 @@ import { useMutation } from "@apollo/client";
 import { useParams, useRouter } from "next/navigation";
 import { ChangeEvent, FormEvent, useState } from "react";
 import {
-  IBoardsWriteHook,
-  IError,
-  IFormData,
-} from "../../../../types/components.type";
-import {
   CreateBoardDocument,
   UpdateBoardDocument,
 } from "../../../../commons/graphql/graphql";
 import { useImageStore } from "../../../../commons/stores/useImageStore";
+import { IBoardsWriteHook, IError, IFormData } from "../types/board.type";
 
 export default function useBoardsWrite(
   props: IBoardsWriteHook,

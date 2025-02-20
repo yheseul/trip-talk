@@ -1,15 +1,15 @@
 "use client";
 
-import Input from "../../Input";
-import Button from "../../Button";
-import TextArea from "../../TextArea";
+import Input from "../../Input/components/Input";
+import Button from "../../Button/components/Button";
+import TextArea from "../../TextArea/components/TextArea";
 import { usePathname } from "next/navigation";
-import ImageUploader from "../../ImageUploader/ImageUploader";
 import { BOARDS_WRITE } from "../../../../constants/constants";
-import { IBoardsWriteHook } from "../../../../types/components.type";
 import useBoardsWrite from "../hooks/useBoardsWrite";
 import ModalContainer from "../../ModalContainer";
 import { useState } from "react";
+import { IBoardsWriteHook } from "../types/board.type";
+import ImageUploader from "../../ImageUploader/components/ImageUploader";
 
 export default function BoardsWrite(props: IBoardsWriteHook) {
   const [userPassword, setUserPassword] = useState("");
