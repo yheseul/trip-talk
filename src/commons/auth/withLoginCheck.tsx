@@ -11,13 +11,14 @@ const withLoginCheck =
     const router = useRouter();
     const { accessToken } = useAccessTokenStore();
     const { isLoaded } = useLoadStore();
+
     useEffect(() => {
       if (!isLoaded) return;
       if (accessToken) return;
 
       alert("로그인 후 다시 시도해 주세요.");
       router.push("/");
-    }, [isLoaded]);
+    }, [isLoaded, accessToken, router]);
     return <Component {...props} />;
   };
 

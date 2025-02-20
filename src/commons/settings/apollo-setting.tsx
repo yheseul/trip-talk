@@ -30,7 +30,7 @@ export default function ApolloUploadSetting(props: IApolloUploadSetting) {
         if (newAccessToken) setAccessToken(newAccessToken);
       })
       .finally(setIsLoaded);
-  }, []);
+  }, [setAccessToken, setIsLoaded]);
 
   const errorLink = onError(({ graphQLErrors, operation, forward }) => {
     if (graphQLErrors) {
