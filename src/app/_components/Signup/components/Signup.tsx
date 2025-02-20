@@ -1,11 +1,11 @@
 "use client";
 
 import { CloseOutlined } from "@ant-design/icons";
-import Button from "../../Button";
+import Button from "../../Button/components/Button";
 import ControllerInput from "../../ControllerInput";
-import ModalContainer from "../../ModalContainer";
 import { useRouter } from "next/navigation";
 import useSignup from "../hooks/useSignup";
+import ModalContainer from "../../ModalContainer/components/ModalContainer";
 
 export default function Signup() {
   const { onClickSubmit, handleSubmit, control, formState, isModalOpen } =

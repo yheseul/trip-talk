@@ -1,9 +1,9 @@
 import { CommentOutlined } from "@ant-design/icons";
 import { ICommentFormProps } from "../types/comment.type";
-import StarRating from "../../StarRating/StarRating";
-import Input from "../../Input";
-import TextArea from "../../TextArea";
-import Button from "../../Button";
+import StarRating from "../../StarRating/components/StarRating";
+import Input from "../../Input/components/Input";
+import TextArea from "../../TextArea/components/TextArea";
+import Button from "../../Button/components/Button";
 
 const CommentForm = (props: ICommentFormProps) => {
   const {

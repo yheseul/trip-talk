@@ -1,6 +1,6 @@
 import { SearchOutlined } from "@ant-design/icons";
 import CustomDatePicker from "../../CustomDatePicker";
-import Input from "../../Input";
+import Input from "../../Input/components/Input";
 
 export default function BoardListMenu() {
   // const { onChangeSearch } = useBoardListMenu();

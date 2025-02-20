@@ -1,5 +1,5 @@
 import { Controller } from "react-hook-form";
-import Input from "./Input";
+import Input from "./Input/components/Input";
 
 export default function ControllerInput(props) {
   const { control, id, formState } = props;

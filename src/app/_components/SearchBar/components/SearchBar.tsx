@@ -1,5 +1,5 @@
 import { SearchOutlined } from "@ant-design/icons";
-import Input from "../../Input";
+import Input from "../../Input/components/Input";
 import useSearchBar from "../hooks/useSearchBar";
 
 export default function SearchBar() {

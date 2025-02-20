@@ -1,5 +1,5 @@
 import { usePathname } from "next/navigation";
-import Button from "./Button";
+import Button from "./Button/components/Button";
 import CustomDatePicker from "./CustomDatePicker";
 import SearchBar from "./SearchBar/components/SearchBar";
 import { useRouter } from "next/navigation";

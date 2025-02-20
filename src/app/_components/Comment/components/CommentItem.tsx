@@ -1,11 +1,11 @@
 import { CloseOutlined, EditOutlined, UserOutlined } from "@ant-design/icons";
-import StarRating from "../../StarRating/StarRating";
+import StarRating from "../../StarRating/components/StarRating";
 import CreatedAt from "../../CreatedAt";
 import { ICommentItemProps } from "../types/comment.type";
 
 const CommentItem = (props: ICommentItemProps) => {
   const { commentData, onClickEditComment, onClickDeleteComment } = props;
-  
+
   return (
     <div className="flex flex-col w-full gap-2 py-10 border-b border-lightGray">
       <div className="flex items-center justify-between w-full">

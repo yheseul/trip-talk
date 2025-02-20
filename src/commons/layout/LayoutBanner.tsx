@@ -1,10 +1,10 @@
 "use client";
 
-import BannerSlider from "../../app/_components/BannerSlider";
+import Carousel from "../../app/_components/Carousel/components/Carousel";
 
 export default function LayoutBanner() {
   return (
-    <BannerSlider
+    <Carousel
       delay={3000}
       length={6}
       image="banner"

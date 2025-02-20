@@ -6,10 +6,10 @@ import TextArea from "../../TextArea/components/TextArea";
 import { usePathname } from "next/navigation";
 import { BOARDS_WRITE } from "../../../../constants/constants";
 import useBoardsWrite from "../hooks/useBoardsWrite";
-import ModalContainer from "../../ModalContainer";
 import { useState } from "react";
 import { IBoardsWriteHook } from "../types/board.type";
 import ImageUploader from "../../ImageUploader/components/ImageUploader";
+import ModalContainer from "../../ModalContainer/components/ModalContainer";
 
 export default function BoardsWrite(props: IBoardsWriteHook) {
   const [userPassword, setUserPassword] = useState("");

@@ -1,4 +1,4 @@
-import Button from "../../Button";
+import Button from "../../Button/components/Button";
 import useBoardsDetail from "../hooks/useBoardsDetail";
 import LikeAndDisLikeButton from "../../DisLikeButton";
 import Youtube from "../../Youtube";
