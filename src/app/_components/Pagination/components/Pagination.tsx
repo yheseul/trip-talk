@@ -1,6 +1,6 @@
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
-import usePagination from "../../commons/hooks/usePagination";
-import { IPagination } from "../../types/components.type";
+import usePagination from "../hooks/usePagination";
+import { IPagination } from "../types/Pagination.type";
 
 export default function Pagination(props: IPagination) {
   const {
