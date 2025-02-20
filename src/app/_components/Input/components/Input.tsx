@@ -1,5 +1,5 @@
-import { INPUT_CHILDREN, PLACEHOLDERS } from "../../constants/constants";
-import { IInputProps } from "../../types/components.type";
+import { INPUT_CHILDREN, PLACEHOLDERS } from "../../../../constants/constants";
+import { IInputProps } from "../types/Input.type";
 
 export default function Input({
   id,

@@ -1,6 +1,6 @@
 import { usePathname } from "next/navigation";
-import { PLACEHOLDERS } from "../../constants/constants";
-import { ITextArea } from "../../types/components.type";
+import { PLACEHOLDERS } from "../../../../constants/constants";
+import { ITextArea } from "../types/textArea.type";
 
 export default function TextArea({
   id,
