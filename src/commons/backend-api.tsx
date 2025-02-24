@@ -128,8 +128,16 @@ export const FETCH_BOARD_COMMENTS = gql`
 `;
 
 export const FETCH_BOARDS_COUNT = gql`
-  query fetchBoardsCount {
-    fetchBoardsCount
+  query fetchBoardsCount(
+    $search: String
+    $endDate: DateTime
+    $startDate: DateTime
+  ) {
+    fetchBoardsCount(
+      search: $search
+      endDate: $endDate
+      startDate: $startDate
+    )
   }
 `;
 
