@@ -39,9 +39,7 @@ export default function useFilterPostsByDateRange() {
       setFilteredData(boardsData?.fetchBoards || []);
     };
 
-    if (!isDateRange) {
-      fetchFilteredData();
-    }
+    fetchFilteredData();
   }, [dateRange, currentPage, refetchBoards, refetchBoardsCount, isDateRange]);
 
   return { lastPage, isDateRange, filteredData, currentPage };
