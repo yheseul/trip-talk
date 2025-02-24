@@ -33,3 +33,9 @@ export interface IError {
     message: string;
   };
 }
+
+export interface IBoardListProps {
+  data: IBoardData | undefined;
+  filteredData: IBoardList[] | undefined;
+  isDateRange: boolean;
+}

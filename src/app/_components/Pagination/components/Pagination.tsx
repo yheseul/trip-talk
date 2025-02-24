@@ -1,15 +1,12 @@
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import usePagination from "../hooks/usePagination";
 import { IPagination } from "../types/Pagination.type";
+import { useCurrentPageStore } from "../stores/useCurrentPageStore";
 
 export default function Pagination(props: IPagination) {
-  const {
-    startPage,
-    onClickPage,
-    onClickPrevPage,
-    onClickNextPage,
-    currentPage,
-  } = usePagination(props);
+  const { startPage, onClickPage, onClickPrevPage, onClickNextPage } =
+    usePagination(props);
+  const { currentPage } = useCurrentPageStore();
 
   return (
     <div className="flex items-center justify-center gap-2 py-2 text-lg cursor-pointer">

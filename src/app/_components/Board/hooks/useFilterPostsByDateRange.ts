@@ -1,21 +1,38 @@
+import { useEffect, useState } from "react";
 import { useQuery } from "@apollo/client";
-import { IBoardData, IBoardList } from "../types/board.type";
-import { FetchBoardsCountDocument } from "../../../../commons/graphql/graphql";
+import { IBoardList } from "../types/board.type";
+import {
+  FetchBoardsCountDocument,
+  FetchBoardsDocument,
+} from "../../../../commons/graphql/graphql";
 import { useDateRangeStore } from "../../../../commons/stores/useDateRangeStore";
+import { useCurrentPageStore } from "../../Pagination/stores/useCurrentPageStore";
 
-export default function useFilterPostsByDateRange(data?: IBoardData) {
+export default function useFilterPostsByDateRange() {
   const { data: dataBoardsCount } = useQuery(FetchBoardsCountDocument);
-  const lastPage = Math.ceil((dataBoardsCount?.fetchBoardsCount ?? 10) / 10);
+  const { refetch } = useQuery(FetchBoardsDocument);
   const { dateRange } = useDateRangeStore();
+  const [filteredData, setFilteredData] = useState<IBoardList[]>([]);
+  const { currentPage } = useCurrentPageStore();
 
+  const lastPage = Math.ceil((dataBoardsCount?.fetchBoardsCount ?? 10) / 10);
   const isDateRange = dateRange[0] === null && dateRange[1] === null;
-  const startDate = dateRange[0]?.getTime() ?? 0;
-  const endDate = dateRange[1]?.getTime() ?? 0;
 
-  const filteredData = data?.fetchBoards.filter((board: IBoardList) => {
-    const createdAt = new Date(board.createdAt).getTime();
-    return startDate <= createdAt && createdAt < endDate + 86400000;
-  });
+  useEffect(() => {
+    const fetchFilteredData = async () => {
+      const { data } = await refetch({
+        endDate: dateRange[1]?.toISOString(),
+        startDate: dateRange[0]?.toISOString(),
+        page: currentPage,
+      });
 
-  return { lastPage, isDateRange, filteredData };
+      setFilteredData(data?.fetchBoards || []);
+    };
+
+    if (!isDateRange) {
+      fetchFilteredData();
+    }
+  }, [dateRange, refetch, currentPage, isDateRange]);
+
+  return { lastPage, isDateRange, filteredData, currentPage };
 }

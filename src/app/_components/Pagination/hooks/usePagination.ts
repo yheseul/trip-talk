@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { IPagination } from "../types/Pagination.type";
+import { useCurrentPageStore } from "../stores/useCurrentPageStore";
 
 export default function usePagination(props: IPagination) {
   const [startPage, setStartPage] = useState(1);
-  const [currentPage, setCurrentPage] = useState(1);
+  const { setCurrentPage } = useCurrentPageStore();
 
   const onClickPage = (page: number) => () => {
+    setCurrentPage(page);
     props.refetch({ page });
-    setCurrentPage(Number(page));
   };
 
   const onClickPrevPage = () => {
@@ -31,6 +32,5 @@ export default function usePagination(props: IPagination) {
     onClickPage,
     onClickPrevPage,
     onClickNextPage,
-    currentPage,
   };
 }
