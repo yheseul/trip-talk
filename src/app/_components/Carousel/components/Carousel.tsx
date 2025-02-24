@@ -6,13 +6,7 @@ import "swiper/css/navigation";
 import SlideImage from "./SlideImage";
 import { ICarousel } from "../types/carousel.type";
 
-export default function Carousel({
-  delay,
-  length,
-  image,
-  width,
-  height,
-}: ICarousel) {
+export default function Carousel({ delay, length, image }: ICarousel) {
   return (
     <Swiper
       spaceBetween={20}
@@ -27,15 +21,11 @@ export default function Carousel({
       }}
       navigation={true}
       modules={[Autoplay, Pagination, Navigation]}
-      className="mySwiper"
+      className="w-full h-full mySwiper"
     >
       {Array.from({ length }).map((_, i) => (
         <SwiperSlide key={i + 1}>
-          <SlideImage
-            image={`${image}${i + 1}`}
-            width={width}
-            height={height}
-          />
+          <SlideImage image={`${image}${i + 1}`} />
         </SwiperSlide>
       ))}
     </Swiper>

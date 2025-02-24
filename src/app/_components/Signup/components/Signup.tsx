@@ -45,7 +45,7 @@ export default function Signup() {
             id="checkPassword"
             formState={formState}
           />
-          <Button id="singUp" color="white" width="100%" />
+          <Button id="singUp" color="white" />
           {isModalOpen && (
             <ModalContainer
               isSwitched={false}

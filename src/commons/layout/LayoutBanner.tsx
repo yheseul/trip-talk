@@ -8,8 +8,6 @@ export default function LayoutBanner() {
       delay={3000}
       length={6}
       image="banner"
-      width="100%"
-      height="512px"
     />
   );
 }

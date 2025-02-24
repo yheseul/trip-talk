@@ -9,23 +9,25 @@ export default function Board(props: IBoardList) {
 
   return (
     <li
-      className="relative flex items-center self-stretch gap-2 px-6 py-3 text-sm font-light text-center border border-solid rounded-lg cursor-pointer text-ellipsis border-offWhite"
+      className="relative flex items-center justify-start w-full gap-2 px-1 py-3 text-sm font-light text-center border border-solid rounded-lg cursor-pointer border-offWhite"
       onClick={onClickBoard}
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
     >
-      <span className="w-16 overflow-hidden text-mediumGray">
+      <span className="px-3 overflow-hidden text-mediumGray">
         {props.number}
       </span>
-      <span className="flex-1 overflow-hidden font-medium text-start text-charcoal">
+      <span className="flex-1 w-3/6 pl-3 overflow-hidden font-medium text-start text-charcoal text-ellipsis whitespace-nowrap">
         {props.title}
       </span>
-      <span className="w-32 text-darkGray">{props.writer}</span>
-      <span className="w-32 text-mediumGray">
+      <span className="w-1/6 overflow-hidden text-darkGray text-ellipsis whitespace-nowrap">
+        {props.writer}
+      </span>
+      <span className="px-3 text-mediumGray">
         {props.createdAt.slice(0, 10).replaceAll("-", ".")}
       </span>
       {isHovered && (
-        <button className="absolute right-2 top-2.5" onClick={onCLickDelete}>
+        <button className="absolute right-2 top-3" onClick={onCLickDelete}>
           <DeleteOutlined />
         </button>
       )}

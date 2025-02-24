@@ -5,5 +5,4 @@ export interface IButtonProps {
   disabled?: boolean;
   color: "blue" | "gray" | "white" | "black";
   onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
-  width?: string;
 }

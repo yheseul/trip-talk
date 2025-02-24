@@ -7,7 +7,6 @@ export default function Button({
   disabled,
   color,
   onClick,
-  width,
 }: IButtonProps) {
   const colorVariants = {
     blue: "bg-blue text-white",
@@ -21,9 +20,8 @@ export default function Button({
       id={id}
       type={id.includes("submit") ? "submit" : undefined}
       disabled={disabled}
-      className={`h-12 py-3 px-4 gap-2 rounded-lg text-lg font-semibold flex items-center border-solid border justify-center ${colorVariants[color]}`}
+      className={`h-12 py-3 px-4 rounded-lg text-lg font-semibold flex items-center border-solid border justify-center ${colorVariants[color]}`}
       onClick={onClick}
-      style={{ width: width }}
     >
       {BUTTON[id]}
       {id === "menu" ||

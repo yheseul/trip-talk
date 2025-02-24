@@ -9,7 +9,7 @@ export default function Login() {
   const { handleInputChange, onClickLogin, onClickSignup } = useLogin();
 
   return (
-    <div className="relative flex flex-col items-center self-stretch gap-6 px-5 pt-16 w-96">
+    <div className="relative flex flex-col items-center self-stretch gap-6 px-5 py-7 md:py-16 w-96">
       <Image src="/webp/logo.webp" alt="logo" width={120} height={74.533} />
       <div className="self-stretch text-lg not-italic font-semibold leading-6 text-center text-black">
         트립트립에 오신걸 환영합니다.
@@ -30,8 +30,10 @@ export default function Login() {
         onChange={handleInputChange}
         isLabel={false}
       />
-      <Button id="login" color="blue" width="100%" onClick={onClickLogin} />
-      <Button id="singUp" color="white" width="100%" onClick={onClickSignup} />
+      <div className="flex gap-2">
+        <Button id="login" color="blue" onClick={onClickLogin} />
+        <Button id="singUp" color="white" onClick={onClickSignup} />
+      </div>
     </div>
   );
 }

@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function AccommodationList() {
   return (
-    <div className="flex flex-row gap-5">
+    <div className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4">
       {Array.from(Array(4)).map((_, i) => (
-        <div className="w-[296px]" key={i}>
+        <div className="grow" key={i}>
           <Image
             src="/webp/accommodationCard.webp"
             alt="accommodationCard"

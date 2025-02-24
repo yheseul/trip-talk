@@ -21,18 +21,19 @@ export default function Boards() {
   }
 
   return (
-    <div className="px-4">
+    <div className="flex flex-col w-full py-2">
+      <div className="flex flex-col gap-2">
       <FilterBar />
-      <div className="flex flex-col items-start self-stretch w-full gap-2 px-12 py-6 bg-white rounded-2xl min-w-[680px] shadow-[0px_0px_20px_0px_rgba(0,0,0,0.08)]">
-        <div className="flex items-center self-stretch gap-2 px-6 py-4 text-base font-medium text-charcoal">
-          <div className="flex w-16 items-center justify-center gap-2.5">
+      <div className="flex flex-col items-start self-stretch w-full px-3 gap-2 py-6 bg-white rounded-2xl shadow-[0px_0px_20px_0px_rgba(0,0,0,0.08)]">
+        <div className="flex items-center self-stretch gap-2 px-1 py-4 text-base font-medium text-charcoal">
+          <div className="flex items-center justify-center px-1">
             번호
           </div>
-          <div className="flex gap-2.5 items-center justify-start flex-1">
+          <div className="flex items-center justify-start flex-1 w-3/6 pl-3">
             제목
           </div>
-          <div className="flex justify-center items-center gap-2.5">작성자</div>
-          <div className="flex justify-center items-center gap-2.5">날짜</div>
+          <div className="flex items-center justify-center w-1/6 mr-8">작성자</div>
+          <div className="flex items-center justify-center mr-9">날짜</div>
         </div>
         <ul className="flex flex-col w-full gap-2">
           {isDateRange
@@ -57,6 +58,7 @@ export default function Boards() {
                 />
               ))}
         </ul>
+      </div>
       </div>
       <Pagination refetch={refetch} lastPage={lastPage} />
     </div>

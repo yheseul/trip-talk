@@ -1,20 +1,9 @@
 import Image from "next/image";
-import { ICarouselImage } from "../types/carousel.type";
 
-export default function SlideImage({ image, width, height }: ICarouselImage) {
+export default function SlideImage({ image }: { image: string }) {
   return (
-    <div className="w-full p-2.5">
-      <Image
-        src={`/webp/${image}.webp`}
-        alt={image}
-        width={0}
-        height={0}
-        sizes="100vw"
-        style={{
-          width,
-          height,
-        }}
-      />
+    <div className="w-full p-2.5 h-full">
+      <Image src={`/webp/${image}.webp`} alt={image} fill />
     </div>
   );
 }
