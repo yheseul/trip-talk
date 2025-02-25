@@ -1,9 +1,10 @@
 "use client";
 
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent } from "react";
+import { useSearchBarStore } from "../../../../commons/stores/useSearchBarStore";
 
 export default function useSearchBar() {
-  const [searchBar, setSearchBar] = useState("");
+  const { searchBar, setSearchBar } = useSearchBarStore();
 
   const onChangeSearch = (event: ChangeEvent<HTMLInputElement>) => {
     const searchWord = event.target.value;

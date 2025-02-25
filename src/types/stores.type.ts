@@ -17,3 +17,8 @@ export interface LoadState {
   isLoaded: boolean;
   setIsLoaded: () => void;
 }
+
+export interface SearchBarState {
+  searchBar: string;
+  setSearchBar: (keyWord: string) => void;
+}
