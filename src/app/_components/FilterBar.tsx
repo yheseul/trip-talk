@@ -4,7 +4,11 @@ import CustomDatePicker from "./CustomDatePicker";
 import SearchBar from "./SearchBar/components/SearchBar";
 import { useRouter } from "next/navigation";
 
-const FilterBar = () => {
+const FilterBar = ({
+  onClickFilter,
+}: {
+  onClickFilter: () => Promise<void>;
+}) => {
   const path = usePathname();
   const isPurchasePage = path.includes("purchase");
   const router = useRouter();
@@ -25,7 +29,7 @@ const FilterBar = () => {
             <SearchBar />
           </div>
           <div className="grow-2">
-            <Button color="black" id="search" />
+            <Button color="black" id="search" onClick={onClickFilter} />
           </div>
         </div>
       </div>
