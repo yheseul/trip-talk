@@ -1,6 +1,7 @@
-import useImageUploader from "./hooks/useImageUploader";
+
 import { DeleteOutlined, PlusOutlined } from "@ant-design/icons";
-import useHover from "../../../commons/hooks/useHover";
+import useHover from "../../../../commons/hooks/useHover";
+import useImageUploader from "../hooks/useImageUploader";
 
 export default function ImageUploader({ id }: { id: string }) {
   const { onClickImage, onCLickDelete, handleImageUpload, imageUrl, fileRef } =
